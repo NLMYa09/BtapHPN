@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.bigbox{
+    width: 25%;
+    height: 90%;
+    border: 5px solid purple;
+    margin: 10px;
+}
+.box1{
+	border: 9px red solid;
+	margin-left: 30%;
+	margin-right: 9%;
+	margin-top: 9%;
+	padding-top: 15%;
+	padding-bottom: 15%;
+	padding-left: 15%;
+	padding-right: 15%;
+	border-top-width: 30px;
+	border-top-color: deeppink;
+	border-bottom-style: dashed;
+	border-bottom-color: red;
+	border-left-color: red;
+	border-right-color: greenyellow;
+	border-top-left-radius: 15px;
+}
+.box2{
+	border: 9px red solid;
+	margin-left: 30%;
+	margin-right: 9%;
+	margin-bottom: 9%;
+	padding-top: 15%;
+	padding-bottom: 15%;
+	padding-left: 15%;
+	padding-right: 15%;
+	border-top-width: 30px;
+	border-top-color: deeppink;
+	border-bottom-style: dashed;
+	border-bottom-color: red;
+	border-left-color: red;
+	border-right-color: greenyellow;
+	border-top-left-radius: 15px;
+}
