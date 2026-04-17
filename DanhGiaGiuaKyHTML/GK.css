@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: Arial;
+	background-color: #D4F5FF;
+}
+
+.container{
+	width: 400px;
+	margin: 50px auto;
+	background: white;
+	padding: 20px;
+	border-radius: 10px;
+}
+
+h2{
+	text-align: center;
+	color: steelblue;
+}
+
+label{
+	display: block;
+	margin-top: 10px;
+}
+
+input, textarea{
+	width: 100%;
+	padding: 8px;
+	margin-top: 5px;
+}
+
+button{
+	width: 100%;
+	padding: 10px;
+	margin-top: 15px;
+	background-color: steelblue;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+button:hover{
+	background-color: darkblue;
+}
+
+.error{
+	color: red;
+	font-size: 13px;
+}
