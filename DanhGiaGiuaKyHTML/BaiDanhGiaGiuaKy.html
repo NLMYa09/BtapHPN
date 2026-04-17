@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Bai Giua ky</title>
+	<link rel="stylesheet" href="GK.css">
+</head>
+
+<body>
+	<div class="container">
+		<h2>ĐĂNG KÝ THÀNH VIÊN</h2><br>
+		
+		<form id="registerForm">
+			<lable>Họ và tên</lable>
+			<input type="text" id="name" placeholder="Nhập họ và tên">
+			<small id="error-name" class="error"></small><br>
+			
+			<label>Email</label>
+			<input type="text" id="email" placeholder="Nhập email">
+			<small id="error-email" class="error"></small><br>
+			
+			<lable>Số điện thoại</lable>
+			<input type="number" id="phone" placeholder="Nhập số điện thoại">
+			<small id="error-phone" class="error"></small><br>
+			
+			<label>Mật khẩu</label>
+			<input type="password" id="password" placeholder="Nhập mật khẩu">
+			<small id="error-password" class="error"></small><br>
+			
+			<label>Xác nhận mật khẩu</label>
+			<input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu">
+			<small id="error-confirm" class="error"></small><br>
+			
+			<label>Địa chỉ</label>
+			<textarea id="address" placeholder="Nhập địa chỉ"></textarea>
+			<small id="error-address" class="error"></small><br>
+			
+			<button type="submit">Đăng ký</button>
+		</form>
+	</div>
+	
+	<script>
+		document.getElementByID("registerForm").addEventListener("submit", function(e){
+			e.preventDefault();
+			let isValid = true;
+			let name = document.getElementById("name").value.trim();
+			let email = document.getElementById("email").value.trim();
+			let phone = document.getElementById("phone").value.trim();
+			let password = document.getElementById("password").value.trim();
+			let confirmPassword = document.getElementById("confirmPassword").value.trim();
+			let address = document.getElementById("address").value.trim();
+			
+			document.querySectorAll(".error").forEach(el => el.innerHTML = "");
+			
+			if(name === ""){
+				document.getElementById("error-email").innerHTML = "Email không được để trống";
+				isValid = false;
+			}
+			else if(!email.endsWith("@gmail.com")){
+				document.getElementById("error-email").innerHTML = "Email phải là @gmail.com";
+				isValid = false;
+			}
+			
+			let phoneRegex = /^[0-9]{10}$/;
+			if(phone === ""){
+				document.getElementById("error-phone").innerHTML = "Số điện thoại phải có 10 chữ số";
+				isValid = false;
+			}
+			
+			if(password === ""){
+				document.getElementById("error-password").innerHTML = "Mật khẩu không được để trống";
+				isValid = false;
+			}
+			
+			if(confirmPassword === ""){
+				document.getElementById("error-confirm").innerHTML = "Vui lòng nhập lại mật khẩu";
+				isValid = false;
+			} else if(confirmPassword !== password){
+				document.getElementById("error-confirm").innerHTML = "Mật khẩu không khớp";
+				isValid = false;
+			}
+			
+			if(address === ""){
+				document.getElementById("error-address").innerHTML = "Địa chỉ không được để trống";
+				isValid = false;
+			}
+			
+			if(isValid){
+				alert("Đã gửi thông tin đăng ký thành công");
+			}
+		});
+	</script>
+</body>
+</html>
