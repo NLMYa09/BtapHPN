@@ -40,7 +40,7 @@
 	</div>
 	
 	<script>
-		document.getElementByID("registerForm").addEventListener("submit", function(e){
+		document.getElementById("registerForm").addEventListener("submit", function(e){
 			e.preventDefault();
 			let isValid = true;
 			let name = document.getElementById("name").value.trim();
